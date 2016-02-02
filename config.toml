@@ -6,7 +6,7 @@ theme = "hugo-cisco" #"hugo-uno"
 
 
 [Params]  # For hugo-uno
-description = "New Album Release 2016"
+description = "New Album Release June 2016"
 description_link = "http://www.youtube.com/embed/LaM6oSp1M00"
 video_id = "LaM6oSp1M00"
 cover = "images/cd-cover.jpg"
