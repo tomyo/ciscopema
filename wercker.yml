@@ -20,7 +20,16 @@ build:
     # Read more about steps on our dev center:
     # http://devcenter.wercker.com/docs/steps/index.html
   steps:
-    - script:
-        name: echo
-        code: |
-          echo "hello world!"
+     - arjen/hugo-build:
+        version: "HEAD"
+        theme: hugo-cisco
+
+
+deploy:
+  steps:
+     - install-packages:
+        packages: git ssh-client
+     - uetchy/gh-pages:
+        token: $GIT_TOKEN
+        domain: ciscopema.com
+        basedir: public
