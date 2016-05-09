@@ -13,4 +13,5 @@ cover = "/images/cd-cover.jpg"
 email = "hola@ciscopema.com"
 instagram = "ciscopema"
 facebook = "ciscopemamusic"
-youtube = "https://www.youtube.com/channel/UC3K26naF-NtGUZzu-Mrb2Sw"
+youtube = "channel/UC3K26naF-NtGUZzu-Mrb2Sw"
+youtube_title = 'Youtube channel'
