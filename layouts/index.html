@@ -1,0 +1,45 @@
+{{ partial "head.html" . }}
+  <body>
+    <div class='wrapper'>
+      <section class="container">
+        <h1 class="item">Cisco Pema</h1>
+        <hr />
+        <div class="container video-link" data-video-id="x8ErOxGPiGY" data-video-auto-close="true">
+          <p class="panel-cover__description"> New Album Release October 2016 </p>
+          <i class="fa fa-youtube-play fa-3x"></i>
+        </div>
+        <hr class="second-divisor"/>
+        <div class="container-inline">
+          <nav class="container">
+            <a href="#pressInfo#En" data-toggle="modal" class="button">+ Info</a>
+          </nav>
+          <nav>
+            <a class="button-social" href="http://facebook.com/ciscopemamusic" title="@ciscopemamusic on Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a class="button-social" href="http://instagram.com/ciscopema" title="@ciscopema on Instagram">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <br />
+            <a class="button-social" href="https://www.youtube.com/channel/UC3K26naF-NtGUZzu-Mrb2Sw" title="Youtube channel">
+              <i class="fa fa-youtube"></i>
+            </a>
+            <a class="button-social" href="mailto:hola@ciscopema.com" title="Email hola@ciscopema.com">
+              <i class="fa fa-envelope-o"></i>
+            </a>
+          </nav>
+        </div>
+        <hr />
+        <a id="tourDates" href="#tourDates" class="button">Tour dates</a>
+      </section>
+      <section id="tourDatesSection" style="display: none">
+        <script type='text/javascript' src='http://widget.bandsintown.com/javascripts/bit_widget.js'></script><a href="http://www.bandsintown.com/Cisco%20Pema" class="bit-widget-initializer" data-artist="Cisco Pema" data-prefix="fbjs">Cisco Pema Tour Dates</a>
+      </section>
+      <section class="modals">
+        {{ partial "press-info-en.html" .}}
+        {{ partial "press-info-de.html" .}}
+        {{ partial "press-info-es.html" .}}
+      </section>
+    </div>
+  </body>
+</html>

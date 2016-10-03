@@ -1,0 +1,158 @@
+main-color = #FFF
+responsiveBreakpoint = 350px
+
+@font-face
+  font-family: 'Ubuntu', sans-serif
+  font-style: normal
+  font-weight: 400
+  src: local("Ubuntu"), local("Ubuntu"), url(../fonts/Ubuntu-Regular.ttf) format("ttf")
+
+@font-face
+  font-family: 'Source Serif Pro', serif
+  font-style: normal
+  font-weight: 400
+  src: local("Source Serif Pro"), local("Source Serif Pro"), url(../fonts/SourceSerifPro-Regular.otf) format("otf")
+
+background-size()
+  -webkit-background-size: arguments
+  -moz-background-size: arguments
+  -o-background-size: arguments
+  background-size: arguments
+
+whenBig()
+  @media screen and (min-width: responsiveBreakpoint)
+    arguments
+
+whenSmall()
+  @media screen and (max-width: responsiveBreakpoint)
+    arguments
+
+body
+  background: url(/images/cd-cover-dark.jpg) no-repeat top center fixed
+  /*background: linear-gradient(to bottom, rgba(68,68,68,.6) 20%,rgba(0,0,0,.9) 100%), url(/images/cd-cover.jpg) */
+  background-size(cover)
+  font-size: 1em
+  font-family: Ubuntu, sans-serif
+  min-width: 300px
+
+*
+  color: main-color
+
+.container
+  display: flex
+  flex-flow column nowrap
+  justify-content: center
+  align-items: center
+
+
+.container-inline
+  display: flex
+  flex-flow: row nowrap
+  justify-content: center
+  align-items: center
+
+.container *
+  margin: 2px;
+
+.wrapper
+  max-width: 620px
+  margin: 0 auto
+  @extend .container
+  padding: 60px 0px
+  // @media screen and (min-width: responsiveBreakpoint)
+  //   padding: 60px 0px
+
+h1
+  font-weight: 100
+  font-stretch: normal
+  font-size: 50px
+  letter-spacing: 4px
+  font-family: "Source Serif Pro", serif
+
+hr
+  border: 0
+  width: 60%
+  height: 1px
+  border-top: 1px solid rgba(255,255,255,.14)
+  margin: 20px auto !important
+
+.second-divisor
+  width: 20%
+
+.video-link
+  cursor: pointer
+
+.video-link p
+  // font-size: 2em
+  font-weight: 100
+  text-shadow: 0 1px 1px rgba(0,0,0,.4)
+
+.button
+  padding: 10px 20px
+  border: 1px solid #3D4260
+  border-radius: 20px
+  font-weight: 700
+  letter-spacing: 1px
+  text-shadow: none
+  text-decoration: none
+  border-color: main-color
+  opacity: .8
+  color: main-color
+
+.button:hover
+  color: main-color
+  border-color: main-color
+  opacity: 1
+  text-decoration: none
+
+.button-social
+  padding: 6px 8px 6px 9px
+  display: inline-block
+  @extend .button
+
+ // Modals
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+  overflow-y: auto;
+}
+
+.modalDialog:target {
+  opacity:1;
+  pointer-events: auto;
+}
+
+.modalDialog > div
+  // width: auto
+  position: relative
+  padding: 5px 20px 13px 20px
+  background: #FFF
+  // border-radius: 20px;
+  margin: auto auto 60px auto
+  @media screen and (min-width: responsiveBreakpoint)
+    margin: 60px auto
+    max-width: 600px
+
+.modalDialog *
+  color: #000 !important
+
+.close
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  text-align: center;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
