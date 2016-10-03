@@ -1,4 +1,4 @@
-baseurl = "http://ciscopema.com/"
+baseurl = "http://ciscopema.com/public/"
 languageCode = "en-us"
 title = "Cisco Pema"
 author = "Tomas Hayes"
