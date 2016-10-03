@@ -10,6 +10,9 @@
   font-weight: 400;
   src: local("Source Serif Pro"), local("Source Serif Pro"), url("../fonts/SourceSerifPro-Regular.otf") format("otf");
 }
+html {
+  min-width: 335px;
+}
 body {
   background: url("/images/cd-cover-dark.jpg") no-repeat top center fixed;
 /*background: linear-gradient(to bottom, rgba(68,68,68,.6) 20%,rgba(0,0,0,.9) 100%), url(/images/cd-cover.jpg) */
@@ -19,7 +22,6 @@ body {
   background-size: cover;
   font-size: 1em;
   font-family: Ubuntu, sans-serif;
-  min-width: 300px;
 }
 * {
   color: #fff;
@@ -136,4 +138,7 @@ hr {
   width: 24px;
   text-decoration: none;
   font-weight: bold;
+}
+section {
+  margin-bottom: 20px;
 }

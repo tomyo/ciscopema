@@ -27,13 +27,15 @@ whenSmall()
   @media screen and (max-width: responsiveBreakpoint)
     arguments
 
+html
+  min-width: 335px  // Browsers add some default marging to body
+
 body
   background: url(/images/cd-cover-dark.jpg) no-repeat top center fixed
   /*background: linear-gradient(to bottom, rgba(68,68,68,.6) 20%,rgba(0,0,0,.9) 100%), url(/images/cd-cover.jpg) */
   background-size(cover)
   font-size: 1em
   font-family: Ubuntu, sans-serif
-  min-width: 300px
 
 *
   color: main-color
@@ -156,3 +158,6 @@ hr
   width: 24px;
   text-decoration: none;
   font-weight: bold;
+
+section
+  margin-bottom: 20px
