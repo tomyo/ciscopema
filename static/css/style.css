@@ -142,3 +142,8 @@ hr {
 section {
   margin-bottom: 20px;
 }
+@media screen and (max-width: 350px) {
+  p {
+    font-size: 0.8em;
+  }
+}
