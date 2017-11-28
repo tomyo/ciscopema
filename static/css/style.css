@@ -22,9 +22,13 @@ body {
   background-size: cover;
   font-size: 1em;
   font-family: Ubuntu, sans-serif;
-}
-* {
   color: #fff;
+}
+.bit-widget {
+  background: transparent !important;
+}
+.bit-widget * {
+  color: #fff !important;
 }
 .container,
 .wrapper {
