@@ -3,15 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost:39929/categories/</loc>
+    <loc>http://ciscopema.com/categories/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:39929/</loc>
+    <loc>http://ciscopema.com/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:39929/tags/</loc>
+    <loc>http://ciscopema.com/tags/</loc>
   </url>
   
 </urlset>
