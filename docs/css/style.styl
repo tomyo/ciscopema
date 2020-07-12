@@ -123,8 +123,8 @@ hr
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0,0,0,0.8);
-  z-index: 99999;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
   opacity:0;
   -webkit-transition: opacity 400ms ease-in;
   -moz-transition: opacity 400ms ease-in;
@@ -141,9 +141,9 @@ hr
 .modalDialog > div
   // width: auto
   position: relative
-  padding: 5px 20px 13px 20px
+  padding: 1em;//5px 20px 13px 20px
   background: #FFF
-  // border-radius: 20px;
+  border-radius: 1em;
   margin: auto auto 60px auto
   @media screen and (min-width: responsiveBreakpoint)
     margin: 60px auto
@@ -170,3 +170,4 @@ section
 @media screen and (max-width: responsiveBreakpoint)
   p
     font-size: 0.8em;
+
