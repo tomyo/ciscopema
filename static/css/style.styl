@@ -1,7 +1,11 @@
-main-color = #FFF
-responsiveBreakpoint = 350px
+:root {
+  --main-color: #FFF;
+  --tablet: 768px;
 
-@font-face
+}
+
+
+@font-face 
   font-family: 'Ubuntu', sans-serif
   font-style: normal
   font-weight: 400
@@ -19,24 +23,19 @@ background-size()
   -o-background-size: arguments
   background-size: arguments
 
-whenBig()
-  @media screen and (min-width: responsiveBreakpoint)
-    arguments
-
-whenSmall()
-  @media screen and (max-width: responsiveBreakpoint)
-    arguments
 
 html
   min-width: 335px  // Browsers add some default marging to body
 
 body
-  background: url(/images/cisco.jpg) no-repeat center center fixed
+  background: url(/images/cover.jpg) no-repeat center center fixed
   // background: linear-gradient(to top, rgba(68,68,68,.6) 20%, rgba(0,0,0,.9) 100%), url(/images/cactus.jpg)
   background-size(cover)
   font-size: 1em
   font-family: Ubuntu, sans-serif
-  color: main-color
+  color: var(--main-color)
+  margin: 0
+  height: 100vh
 
   &:after 
     content: ""
@@ -76,7 +75,7 @@ body
   margin: 0 auto
   @extend .container
   padding: 60px 0px
-  // @media screen and (min-width: responsiveBreakpoint)
+  // @media screen and (min-width: var(--tablet))
   //   padding: 60px 0px
 
 h1
@@ -112,13 +111,13 @@ hr
   letter-spacing: 1px
   text-shadow: none
   text-decoration: none
-  border-color: main-color
+  border-color: var(--main-color)
   opacity: .8
-  color: main-color
+  color: var(--main-color)
 
 .button:hover
-  color: main-color
-  border-color: main-color
+  color: var(--main-color)
+  border-color: var(--main-color)
   opacity: 1
   text-decoration: none
 
@@ -155,10 +154,10 @@ hr
   padding: 1em;//5px 20px 13px 20px
   background: #FFF
   border-radius: 1em;
-  margin: auto auto 60px auto
-  @media screen and (min-width: responsiveBreakpoint)
-    margin: 60px auto
-    max-width: 600px
+  /* margin: auto auto 60px auto */
+  /* @media screen and (min-width: var(--tablet)) */
+  margin: 60px auto
+  max-width: 600px
 
 .modalDialog *
   color: #000 !important
@@ -178,7 +177,7 @@ section
   margin-bottom: 20px
 
 
-@media screen and (max-width: responsiveBreakpoint)
+@media screen and (max-width: var(--tablet))
   p
     font-size: 0.8em;
 
