@@ -4,12 +4,24 @@
 }
 @font-face {
   font-family: "Aquatico";
+  font-style: normal;
+  font-weight: 400;
   src: url("../fonts/Aquatico-Regular.otf") format("otf");
+  src: url("../fonts/Aquatico-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: 'Lucida Grande';
-  src: url("../fonts/LucidaGrande.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
   src: url("../fonts/LucidaGrande.otf") format("otf");
+  src: url("../fonts/LucidaGrande.ttf") format("truetype");
+}
+/* Define the "system" font family */
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
 html {
   min-width: 335px;
@@ -24,7 +36,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   font-size: 1em;
-  font-family: "Lucida Grande", 'Telex';
+  font-family: "Lucida Grande", system;
   color: var(--main-color);
   margin: 0;
   height: 100vh;
@@ -71,7 +83,7 @@ h1 {
   font-stretch: normal;
   font-size: 50px;
   letter-spacing: 4px;
-  font-family: "Aquatico", serif;
+  font-family: "Aquatico", system;
 }
 hr {
   border: 0;
