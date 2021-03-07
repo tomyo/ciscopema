@@ -81,7 +81,7 @@ body:after {
 h1 {
   font-weight: 100;
   font-stretch: normal;
-  font-size: 50px;
+  font-size: min(3em, 12vw);
   letter-spacing: 4px;
   font-family: "Aquatico", system;
 }
