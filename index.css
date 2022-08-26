@@ -1,7 +1,7 @@
 :root {
   --main-color: #fff;
   --background-color: #000;
-  --background-image: url("/images/cover.jpg");
+  --background-image: url("/images/cover-darkened.jpg");
 }
 
 @font-face {
@@ -41,42 +41,44 @@
 h1 {
   font-weight: 100;
   font-stretch: normal;
-  font-size: min(3em, 11vw);
+  font-size: min(3em, 10vw);
   letter-spacing: 4px;
   font-family: "Aquatico", system-ui;
 }
 
 body {
-  background-color: var(--background-color);
-  background-image: var(--background-image);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  backdrop-filter: brightness(0.6);
-  background-attachment: fixed;
   margin: 0;
   font-family: "Lucida Grande", system-ui;
   color: var(--main-color);
 }
 
+body::before {
+  content: '';
+  position: fixed;
+  width:100%;
+  height: 100%;
+  height: 100vh;
+  height: 100lvh;
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
 main {
   align-items: center;
   display: flex;
   flex-flow: column nowrap;
-  padding-top: 4em;
+  padding-block-start: 4em;
+  padding-inline: 0.5em;
   min-height: 100vh;
-  gap: 2em;
+  gap: 3em;
 }
 
 main > * {
   margin: 0;
-}
-
-main {
-  display: flex;
-  align-items: center;
-  flex-flow: column nowrap;
-  gap: 3em;
 }
 
 main nav {
@@ -91,11 +93,14 @@ main nav {
   right: 1em;
   border: none;
   width: min-content;  
+  appearance: push-button;
+  background-color: transparent;
+  color: var(--main-color); 
 }
 
 .social-buttons a {
   padding: 6px 9px;
-  display: inline-grid;
+  display: inline-flex;
   margin: 2px;
 }
 
@@ -131,36 +136,31 @@ main nav {
   text-decoration: none;
 }
 
-.button:active, button:active {
-  filter: invert(1)
-}
-
-
 /* modal v2 */
 dialog {
-  color: inherit;
-  border-radius: 1em;
   background-color: transparent;
-  letter-spacing: 0.1px;
+  border-radius: 1rem;
+  color: inherit;
   font-family: system-ui;
+  letter-spacing: 0.1px;
   max-width: 60ch;
-}
-
-dialog button[value="close"] {
-  float: inline-end;
-}
-
-dialog[open] {
-  animation: show 300ms ease normal;
-
 }
 
 dialog::backdrop {
   background: rgba(0,0,0,.5);
-  backdrop-filter: blur(10px)
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
 }
 
-@keyframes show {
+dialog form {
+  text-align: end;
+}
+
+dialog[open] {
+  animation: dialog-show 300ms ease normal;
+}
+
+@keyframes dialog-show {
   from {
       opacity: 0;
   }
