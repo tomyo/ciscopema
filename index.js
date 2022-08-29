@@ -5,7 +5,7 @@ pressInfoButton.addEventListener('click', () => dialog.showModal());
 
 
 // i18n
-const { useI18n } = await import('./utils/useI18n.js');
+const { useI18n } = await import('./i18n/useI18n.js');
 const [getLanguage, updateLangauge] = useI18n();
 
 const langSwitcher = document.querySelector("#lang-switcher");
