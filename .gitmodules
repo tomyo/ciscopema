@@ -1,4 +1,4 @@
-[submodule "i18n"]
+[submodule "lib/i18n"]
 	path = lib/i18n
 	url = https://github.com/tomyo/i18n
 	branch = v0
