@@ -25,7 +25,7 @@
  * https://github.com/csstools/system-font-css/blob/gh-pages/system-font.css
  **/
 @font-face {
-	font-family: system-ui;
+	font-family: "system-ui";
 	font-style: normal;
 	font-weight: 300;
 	src: local(".SFNS-Light"), local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Segoe UI Light"), local("Ubuntu Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
