@@ -119,7 +119,7 @@ customElements.define('tour-dates', class extends HTMLElement {
 
     .event-details p {
       margin-block: 0;
-      line-height: 2ch;
+      line-height: 1.4em;
     }
     `
     this.shadowRoot.appendChild(style);
