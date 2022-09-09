@@ -2,6 +2,9 @@
   --main-color: #fff;
   --background-color: #000;
   --background-image: url("/images/cover-darkened.jpg");
+  --font-family-primary: "Lucida Grande", system-ui;
+  --font-family-secondary: "Aquatico", system-ui;
+  --font-family-fallback: system-ui, sans-serif;
 }
 
 @font-face {
@@ -43,12 +46,12 @@ h1 {
   font-stretch: normal;
   font-size: min(3em, 10vw);
   letter-spacing: 4px;
-  font-family: "Aquatico", system-ui;
+  font-family: var(--font-family-secondary);
 }
 
 body {
   margin: 0;
-  font-family: "Lucida Grande", system-ui;
+  font-family: var(--font-family-primary);
   color: var(--main-color);
 }
 
@@ -111,13 +114,18 @@ main nav {
   margin: 2px;
 }
 
+#tour-dates {
+  min-width: max-content;
+  filter: drop-shadow(0px 0px 1em black);
+}
+
 #tour-dates summary {
   width: max-content;
   margin: 0 auto;
   cursor: default;
 }
 
-.button, button {
+.button, button, *::part(button) {
   padding: 0.6em 0.6em;
   border: 1px solid #3d4260;
   border-radius: 1em;
@@ -167,4 +175,13 @@ dialog[open] {
   to {
      opacity: 1;
   }
+}
+
+tour-dates {
+  font-family: var(--font-family-fallback);
+  min-width: 250px;
+}
+
+tour-dates::part(button) {
+  font-family: var(--font-family-primary);
 }
