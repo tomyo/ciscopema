@@ -67,7 +67,7 @@ customElements.define('tour-dates', class extends HTMLElement {
 
   appendStyles() {
     const style = document.createElement('style');
-    style.innerHTML = `
+    style.innerHTML = /*css*/`
     :host {
       display: block;
     }
@@ -138,6 +138,4 @@ customElements.define('tour-dates', class extends HTMLElement {
     script.setAttribute('src', "//widget.songkick.com/9553324/widget.js");
     this.appendChild(script);
   }
-
-
 });
