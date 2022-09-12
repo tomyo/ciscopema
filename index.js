@@ -6,9 +6,15 @@ pressInfoButton.addEventListener('click', () => dialog.showModal());
 
 // i18n
 const { useL10n } = await import('./lib/i18n/use-l10n.js');
-const [getLanguage, updateLangauge] = useL10n();
+const [getUILanguage, getPreferredLanguage, translateInto] = useL10n({ filesPath: 'l10n/' });
 
 const langSwitcher = document.querySelector("#lang-switcher");
-langSwitcher.value = getLanguage();
+const availableLanguages = [...langSwitcher.options].map(o => o.value);
 
-langSwitcher.addEventListener('change', (e) => updateLangauge(e.target.value));
+if (availableLanguages.includes(getPreferredLanguage())) {
+  await translateInto(getPreferredLanguage());
+}
+
+langSwitcher.value = getUILanguage();
+
+langSwitcher.addEventListener('change', (e) => translateInto(e.target.value));
