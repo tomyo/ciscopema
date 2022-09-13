@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="index.css" />
 
   <script src="index.js" type="module" defer></script>
-  <script src="tour-dates.js" type="module" defer></script>
+  <script src="components/tour-dates.js" type="module" defer></script>
 </head>
 
 <body>
@@ -56,7 +56,9 @@
     <section id="tour-dates">
       <details>
         <summary class="button" data-l10n-key="tour-dates">Tour Dates</summary>
-        <tour-dates></tour-dates>
+        <tour-dates>
+          <p data-l10n-key="fetching-tour-dates">... fetching tour dates</p>
+        </tour-dates>
       </details>
     </section>
   </main>
