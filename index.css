@@ -1,7 +1,7 @@
 :root {
-  --main-color: #fff;
-  --background-color: #000;
-  --background-image: url("/images/cover-darkened.jpg");
+  --main-color: black;
+  --background-color: #fafafa;
+  --background-image: url("/images/retouch-landscape.jpg");
   --font-family-primary: "Lucida Grande", system-ui;
   --font-family-secondary: "Aquatico", system-ui;
   --font-family-fallback: system-ui, sans-serif;
@@ -28,10 +28,10 @@
  * https://github.com/csstools/system-font-css/blob/gh-pages/system-font.css
  **/
 @font-face {
-	font-family: "system-ui";
-	font-style: normal;
-	font-weight: 300;
-	src: local(".SFNS-Light"), local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Segoe UI Light"), local("Ubuntu Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+  font-family: "system-ui";
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNS-Light"), local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Segoe UI Light"), local("Ubuntu Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
 
 
@@ -74,10 +74,11 @@ main {
   align-items: center;
   display: flex;
   flex-flow: column nowrap;
-  padding-block-start: 4em;
+  padding-block: 4em;
   padding-inline: 0.5em;
   min-height: 100vh;
   gap: 3em;
+  justify-content: space-between;
 }
 
 main > * {
@@ -88,6 +89,7 @@ main nav {
   display: flex;
   align-items: center;
   gap: 1em;
+  margin-block-start: auto;
 }
 
 #lang-switcher {
@@ -110,13 +112,12 @@ main nav {
 
 .social-buttons img {
   height: 17px;
-  filter: invert(1);
   margin: 2px;
 }
 
 #tour-dates {
   min-width: max-content;
-  filter: drop-shadow(0px 0px 1em black);
+  filter: drop-shadow(0px 0px 1em var(--background-color));
 }
 
 #tour-dates summary {
@@ -127,7 +128,7 @@ main nav {
 
 .button, button, *::part(button) {
   padding: 0.6em 0.6em;
-  border: 1px solid #3d4260;
+  border: 1px solid var(--main-color);
   border-radius: 1em;
   font-weight: 700;
   letter-spacing: 1px;
@@ -155,7 +156,7 @@ dialog {
 }
 
 dialog::backdrop {
-  background: rgba(0,0,0,.5);
+  background: rgba(255,255,255,.5);
   backdrop-filter: blur(1rem);
   -webkit-backdrop-filter: blur(1rem);
 }
@@ -170,10 +171,10 @@ dialog[open] {
 
 @keyframes dialog-show {
   from {
-      opacity: 0;
+    opacity: 0;
   }
   to {
-     opacity: 1;
+    opacity: 1;
   }
 }
 
