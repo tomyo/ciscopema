@@ -129,7 +129,7 @@ customElements.define('tour-dates', class extends HTMLElement {
     // Use original songkick widget
     this.innerHTML = `
       <a href="https://www.songkick.com/artists/9553324" class="songkick-widget" 
-        data-font-color="white" data-track-button="off" data-theme="dark"
+        data-font-color="black" data-track-button="off" data-theme="light"
         data-locale="en" data-background-color="transparent" data-detect-style="true">
         Cisco Pema
       </a>
