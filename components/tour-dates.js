@@ -68,59 +68,56 @@ customElements.define('tour-dates', class extends HTMLElement {
   appendStyles() {
     const style = document.createElement('style');
     style.innerHTML = /*css*/`
-    :host {
-      display: block;
-    }
+      :host {
+        display: block;
+        line-height: 1.231em;
+      }
 
-    :root {
-      line-height: 1.231em;
-    }
+      a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+      }
 
-    a {
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-    }
+      a button {
+        margin-block: 1rem;
+        cursor: pointer;
+      }
 
-    a button {
-      margin-block: 1rem;
-      cursor: pointer;
-    }
+      * {
+        color: inherit;
+        fill: inherit;
+        font-family: inherit;
+      }
 
-    * {
-      color: inherit;
-      fill: inherit;
-      font-family: inherit;
-    }
-    
-    ol {
-      padding-inline-start: 0;
-      list-style: none;
-    }
+      ol {
+        padding-inline-start: 0;
+        list-style: none;
+      }
 
-    .event-listing  {
-      border-block-start: 1px solid hsla(0,0%,100%,.2);
-      padding-inline: 1ch;
-    }
+      .event-listing  {
+        border-block-start: 1px solid hsla(0,0%, var(--bg-lightness, 0%), .2);
+        padding-inline: 1ch;
+      }
 
-    .event-listing:hover {
-      background-color: hsla(0,0%,100%,.15);
-    }
+      .event-listing:hover {
+        background-color: hsla(0,0%, var(--bg-lightness, 0%), .15);
+      }
 
-    .date-box {
-      display: flex;
-      gap: 1ch;
-      font-size: .8em;
-      font-weight: 700;
-      margin-bottom: .182em;
-      text-transform: uppercase;
-      margin-block: 1em;
-    }
+      .date-box {
+        display: flex;
+        gap: 1ch;
+        font-size: .8em;
+        font-weight: 700;
+        margin-bottom: .182em;
+        text-transform: uppercase;
+        margin-block: 1em;
+      }
 
-    .event-details p {
-      margin-block: 0;
-      line-height: 1.4em;
-    }
+      .event-details p {
+        margin-block: 0;
+        line-height: 1.4em;
+      }
     `
     this.shadowRoot.appendChild(style);
   }
