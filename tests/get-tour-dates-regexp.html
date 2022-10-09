@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<fieldset>
+  <legend>Songkick HTML</legend>
+  <details>
+    <summary>Content</summary>
+    <div id="html"></div>
+  </details>
+</fieldset>
+
+
+<fieldset>
+  <legend>regExp</legend>
+  <span>
+    \<input id="input" style="width: 95%">\i
+  </span>
+  <label><input id='asHtml' type="checkbox"> view as HTML</label>
+</fieldset>
+
+<fieldset>
+  <legend>Parsed content (regExp match)</legend>
+  <div id="output" style="max-width: 90vw; overflow-x:auto"></div>
+</fieldset>
+
+<script type="module" async>
+  import { regExp as configRegExp } from '../config.js';
+  const shadow = html.attachShadow({ mode: 'open' });
+
+  let method = 'innerText';
+
+  function extractByRegExp(regExpText) {
+    let match;
+
+    try {
+      const regExp = new RegExp(regExpText, 'i');
+      match = shadow.innerHTML.match(regExp);
+    } catch (e) { console.error(e) } finally {
+      output[method] = match ? match[0] : '';
+    }
+  }
+
+  input.addEventListener('keyup', (e) => {
+    extractByRegExp(e.target.value);
+  })
+
+  asHtml.addEventListener('change', (e) => {
+    method = e.target.checked ? 'innerHTML' : 'innerText';
+    extractByRegExp(input.value);
+  })
+
+  shadow.innerHTML = await (await fetch('/api/get-songkick-profile')).text();
+  input.value = configRegExp.source;
+  extractByRegExp(input.value);
+
+</script>
