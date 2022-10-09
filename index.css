@@ -173,7 +173,8 @@ dialog[open] {
 tour-dates {
   font-family: var(--font-family-fallback);
   min-width: 250px;
-  --bg-lightness: var(--ml);
+  --border-lightness: var(--ml);
+  --hover-lightness: var(--bl);
 }
 
 tour-dates::part(button) {

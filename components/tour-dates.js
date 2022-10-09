@@ -96,12 +96,12 @@ customElements.define('tour-dates', class extends HTMLElement {
       }
 
       .event-listing  {
-        border-block-start: 1px solid hsla(0,0%, var(--bg-lightness, 0%), .2);
+        border-block-start: 1px solid hsla(0,0%, var(--border-lightness, 0%), .2);
         padding-inline: 1ch;
       }
 
       .event-listing:hover {
-        background-color: hsla(0,0%, var(--bg-lightness, 0%), .15);
+        background-color: hsla(0,0%, var(--hover-lightness, 100%), .15);
       }
 
       .date-box {
