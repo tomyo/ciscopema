@@ -1,6 +1,10 @@
-:root {
-  --main-color: black;
-  --background-color: #fafafa;
+:root, ::backdrop {
+  --h: 0;  /* Hue */
+  --s: 0%; /* Sasturation */
+  --ml: 0%; /* Main lightness */
+  --bl: 98%; /* Background lightness */
+  --main-color: hsl(var(--h), var(--s), var(--ml));
+  --background-color: hsl(var(--h), var(--s), var(--bl));
   --background-image: url("/images/retouch-landscape.jpg");
   --font-family-primary: "Lucida Grande", system-ui;
   --font-family-secondary: "Aquatico", system-ui;
@@ -144,7 +148,7 @@ dialog {
 }
 
 dialog::backdrop {
-  background: rgba(255,255,255,.5);
+  background-color: hsla(var(--h), var(--s), var(--bl), .5);
   backdrop-filter: blur(1rem);
   -webkit-backdrop-filter: blur(1rem);
 }
