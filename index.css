@@ -23,18 +23,6 @@
   src: url("fonts/LucidaGrande.ttf") format("truetype");
 }
 
-/** 
- * Declare a "system" font family for picking the best possible local font-family 
- * https://github.com/csstools/system-font-css/blob/gh-pages/system-font.css
- **/
-@font-face {
-  font-family: "system-ui";
-  font-style: normal;
-  font-weight: 300;
-  src: local(".SFNS-Light"), local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Segoe UI Light"), local("Ubuntu Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
-}
-
-
 * { 
   font-family: inherit;
   box-sizing: border-box;
