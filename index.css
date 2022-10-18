@@ -15,6 +15,7 @@
   font-family: "Aquatico";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url("/assets/fonts/Aquatico-Regular.otf") format("otf");
   src: url("/assets/fonts/Aquatico-Regular.ttf") format("truetype");
 }
@@ -23,6 +24,7 @@
   font-family: "Lucida Grande";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url("/assets/fonts/LucidaGrande.otf") format("otf");
   src: url("/assets/fonts/LucidaGrande.ttf") format("truetype");
 }
