@@ -5,7 +5,7 @@
   --bl: 98%; /* Background lightness */
   --main-color: hsl(var(--h), var(--s), var(--ml));
   --background-color: hsl(var(--h), var(--s), var(--bl));
-  --background-image: url("/images/retouch-landscape.jpg");
+  --background-image: url("/assets/images/retouch-landscape.jpg");
   --font-family-primary: "Lucida Grande", system-ui;
   --font-family-secondary: "Aquatico", system-ui;
   --font-family-fallback: system-ui, sans-serif;
@@ -15,16 +15,16 @@
   font-family: "Aquatico";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/Aquatico-Regular.otf") format("otf");
-  src: url("fonts/Aquatico-Regular.ttf") format("truetype");
+  src: url("/assets/fonts/Aquatico-Regular.otf") format("otf");
+  src: url("/assets/fonts/Aquatico-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Lucida Grande";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/LucidaGrande.otf") format("otf");
-  src: url("fonts/LucidaGrande.ttf") format("truetype");
+  src: url("/assets/fonts/LucidaGrande.otf") format("otf");
+  src: url("/assets/fonts/LucidaGrande.ttf") format("truetype");
 }
 
 * { 
