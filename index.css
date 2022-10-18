@@ -5,7 +5,11 @@
   --bl: 98%; /* Background lightness */
   --main-color: hsl(var(--h), var(--s), var(--ml));
   --background-color: hsl(var(--h), var(--s), var(--bl));
-  --background-image: url("/assets/images/retouch-landscape.jpg");
+  --background-image-fallback: url("/assets/images/retouch-landscape.jpg");
+  --background-image: image-set(
+    url("/assets/images/retouch-landscape.avif") type("image/avif"),
+    url("/assets/images/retouch-landscape.jpg") type("image/jpeg")
+  );
   --font-family-primary: "Lucida Grande", system-ui;
   --font-family-secondary: "Aquatico", system-ui;
   --font-family-fallback: system-ui, sans-serif;
@@ -57,6 +61,7 @@ body::before {
   height: 100vh;
   height: 100lvh;
   background-color: var(--background-color);
+  background-image: var(--background-image-fallback);
   background-image: var(--background-image);
   background-size: cover;
   background-position: center;
