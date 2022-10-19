@@ -18,19 +18,21 @@
 @font-face {
   font-family: "Aquatico";
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   font-display: swap;
-  src: url("/assets/fonts/Aquatico-Regular.otf") format("otf");
   src: url("/assets/fonts/Aquatico-Regular.ttf") format("truetype");
+  src: url("/assets/fonts/Aquatico-Regular.otf") format("otf");
+  src: url("/assets/fonts/Aquatico-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Lucida Grande";
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   font-display: swap;
-  src: url("/assets/fonts/LucidaGrande.otf") format("otf");
   src: url("/assets/fonts/LucidaGrande.ttf") format("truetype");
+  src: url("/assets/fonts/LucidaGrande.otf") format("otf");
+  src: url("/assets/fonts/LucidaGrande.woff2") format("woff2");
 }
 
 * { 
@@ -40,7 +42,7 @@
 
 
 h1 {
-  font-weight: 100;
+  font-weight: normal;
   font-stretch: normal;
   font-size: min(3em, 10vw);
   letter-spacing: 4px;
@@ -129,7 +131,7 @@ main nav {
   padding: 0.6em 0.6em;
   border: 1px solid var(--main-color);
   border-radius: 1em;
-  font-weight: 700;
+  font-weight: bold;
   letter-spacing: 1px;
   text-shadow: none;
   text-decoration: none;
