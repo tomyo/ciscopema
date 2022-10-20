@@ -8,6 +8,8 @@
   --font-family-primary: "Lucida Grande", system-ui;
   --font-family-secondary: "Aquatico", system-ui;
   --font-family-fallback: system-ui, sans-serif;
+
+  height: 100%;
 }
 
 @font-face {
@@ -50,6 +52,7 @@ body {
   font-family: var(--font-family-primary);
   color: var(--main-color);
   background-color: var(--background-color);
+  height: 100%;
 }
 
 .background-image {
@@ -68,7 +71,7 @@ main {
   flex-flow: column nowrap;
   padding-block: 4em;
   padding-inline: 0.5em;
-  min-height: 100vh;
+  min-height: 100%;
   gap: 3em;
   justify-content: space-between;
 }
