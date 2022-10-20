@@ -15,9 +15,9 @@
   font-style: normal;
   font-weight: normal;
   font-display: swap;
-  src: url("/assets/fonts/Aquatico-Regular.ttf") format("truetype");
-  src: url("/assets/fonts/Aquatico-Regular.otf") format("otf");
-  src: url("/assets/fonts/Aquatico-Regular.woff2") format("woff2");
+  src: url("/assets/fonts/Aquatico-Regular.subset.ttf") format("truetype");
+  src: url("/assets/fonts/Aquatico-Regular.subset.otf") format("otf");
+  src: url("/assets/fonts/Aquatico-Regular.subset.woff2") format("woff2");
 }
 
 @font-face {
@@ -25,9 +25,9 @@
   font-style: normal;
   font-weight: normal;
   font-display: swap;
-  src: url("/assets/fonts/LucidaGrande.ttf") format("truetype");
-  src: url("/assets/fonts/LucidaGrande.otf") format("otf");
-  src: url("/assets/fonts/LucidaGrande.woff2") format("woff2");
+  src: url("/assets/fonts/LucidaGrande.subset.ttf") format("truetype");
+  src: url("/assets/fonts/LucidaGrande.subset.otf") format("otf");
+  src: url("/assets/fonts/LucidaGrande.subset.woff2") format("woff2");
 }
 
 * { 
@@ -42,6 +42,7 @@ h1 {
   font-size: min(3em, 10vw);
   letter-spacing: 4px;
   font-family: var(--font-family-secondary);
+  text-transform: uppercase;
 }
 
 body {
