@@ -2,27 +2,40 @@ const tourDatesApiUrl = '/api/get-tour-dates/';
 const tourLinksUrlPrefix = 'https://www.songkick.com/';
 
 async function fetchEventListHtml() {
+  function adaptUrls(text) {
+    return text.replaceAll(/(href=")\//gi, `$1${tourLinksUrlPrefix}`);
+  }
+
   const response = await fetch(tourDatesApiUrl);
   if (!response?.ok) throw new Error(`Error getting tour-dates, reponse status: ${response.status}`);
 
-  const text = await response.text();
-  return adaptUrls(text);
-}
-
-function adaptUrls(text) {
-  return text.replaceAll(/(href=")\//gi, `$1${tourLinksUrlPrefix}`);
+  return adaptUrls(await response.text());
 }
 
 customElements.define('tour-dates', class extends HTMLElement {
-  async connectedCallback() {
+  constructor() {
+    super();
+    this.setUpFetchWhenVisible();
+  }
+
+  setUpFetchWhenVisible() {
+    /* Only fetch and process events when <tour-dates> is visible */
+    let callback = (entries, observer) => {
+      if (![...entries][0].isIntersecting) return;
+
+      this.fetchAndRenderEventList();
+      observer.unobserve(this);
+    };
+
+    new IntersectionObserver(callback).observe(this);
+  }
+
+  async fetchAndRenderEventList() {
     try {
-      const content = await fetchEventListHtml();
+      const eventListNode = await fetchAndFormatEventList(this.getLocale());
       this.attachShadow({ mode: 'open' });
-      this.shadowRoot.innerHTML = content;
+      this.shadowRoot.appendChild(eventListNode);
       this.appendStyles();
-      this.adjustDatesFormat();
-      this.adjustEventsLocation();
-      this.addTicketButtons();
     } catch (error) {
       console.error(error.message);
       console.info('Using original widget as fallback ...');
@@ -32,37 +45,6 @@ customElements.define('tour-dates', class extends HTMLElement {
 
   getLocale() {
     return document.documentElement.lang || this.getAttribute('lang') || 'en';
-  }
-
-  formatDate(date) {
-    const options = { weekday: "short", month: "long", day: "numeric" };
-    return new Date(date).toLocaleDateString(this.getLocale(), options);
-  }
-
-  adjustDatesFormat() {
-    for (const dateBox of this.shadowRoot.querySelectorAll('.date-box')) {
-      const date = dateBox.previousElementSibling.dateTime;
-      dateBox.innerText = this.formatDate(date).replace(',', '');
-    }
-  }
-
-  adjustEventsLocation() {
-    for (const div of this.shadowRoot.querySelectorAll('.event-details')) {
-      const strong = div.querySelector('.primary-detail');
-      const p = document.createElement('p');
-      p.innerText = strong.innerText;
-      strong.remove();
-      div.appendChild(p);
-    }
-  }
-
-  addTicketButtons() {
-    for (const a of this.shadowRoot.querySelectorAll('.event-listing a')) {
-      const button = document.createElement('button');
-      button.innerText = 'Tickets';
-      button.part = 'button';
-      a.appendChild(button);
-    }
   }
 
   appendStyles() {
@@ -136,3 +118,38 @@ customElements.define('tour-dates', class extends HTMLElement {
     this.appendChild(script);
   }
 });
+
+async function fetchAndFormatEventList(locale = 'en') {
+  const template = document.createElement('template');
+  template.innerHTML = await fetchEventListHtml();
+
+  function formatDate(date) {
+    const options = { weekday: "short", month: "long", day: "numeric" };
+    return new Date(date).toLocaleDateString(locale, options);
+  }
+
+  // adjustDateFormat
+  for (const dateBox of template.content.querySelectorAll('.date-box')) {
+    const date = dateBox.previousElementSibling.dateTime;
+    dateBox.innerText = formatDate(date).replace(',', '');
+  }
+
+  // adjustEventsLocation
+  for (const div of template.content.querySelectorAll('.event-details')) {
+    const strong = div.querySelector('.primary-detail');
+    const p = document.createElement('p');
+    p.innerText = strong.innerText;
+    strong.remove();
+    div.appendChild(p);
+  }
+
+  // addTicketButtons
+  for (const a of template.content.querySelectorAll('.event-listing a')) {
+    const button = document.createElement('button');
+    button.innerText = 'Tickets';
+    button.part = 'button';
+    a.appendChild(button);
+  }
+
+  return template.content;
+}
