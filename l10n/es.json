@@ -1,6 +1,7 @@
 {
   "tour-dates": "Fechas de tour",
   "press-info-title": "Información de prensa",
-  "press-info-text": "Una visión fresca de la música sudamericana con elementos de jazz es el centro del sonido de Cisco Pema. Estructuras armónicas modernas junto a una mezcla de ritmos tradicionales y contemporáneos hacen que su música se destaque del resto.\nNacido en Buenos Aires, y arriba de los escenarios desde niño, Cisco Pema se mudó a Austria para obtener el diploma de Música de Jazz e Improvisación en la Universidad de Bruckner. Trabajando siempre como bajista, compositor y productor, finalmente se instala en Berlín donde inicia su carrera solista presentando su álbum debut en 2016.\nHoy, después de tres álbumes de estudio y más de cien shows en Europa y América del Sur, Cisco Pema ofrece una carismática y auténtica actuación que nadie debería perderse.",
-  "close": "Cerrar"
+  "press-info-text": "Una visión fresca de la música sudamericana con elementos de jazz es el centro del sonido de Cisco Pema. Estructuras armónicas modernas junto a una mezcla de ritmos tradicionales y contemporáneos hacen que su música se destaque del resto.\nNacido en Buenos Aires, y arriba de los escenarios desde niño, Cisco Pema se mudó a Austria para obtener el diploma de Música de Jazz e Improvisación en la Universidad de Bruckner. Trabajando siempre como bajista, compositor y productor, finalmente se instala en Berlín donde inicia su carrera solista presentando su álbum debut en 2016.\nHoy, después de cuatro álbumes de estudio y más de cien shows en Europa y América del Sur, Cisco Pema ofrece una carismática y auténtica actuación que nadie debería perderse.",
+  "close": "Cerrar",
+  "fetching-tour-dates": "... Consultando fechas de tour"
 }
