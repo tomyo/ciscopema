@@ -24,8 +24,8 @@
 :root, ::backdrop {
   --h: 0;  /* Hue */
   --s: 0%; /* Sasturation */
-  --ml: 0%; /* Main lightness */
-  --bl: 98%; /* Background lightness */
+  --ml: 98%; /* Main lightness */
+  --bl: 0%; /* Background lightness */
   --main-color: hsl(var(--h), var(--s), var(--ml));
   --background-color: hsl(var(--h), var(--s), var(--bl));
   --font-family-primary: "Lucida Grande", system-ui;
@@ -63,7 +63,7 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   z-index: -1;
 }
@@ -111,6 +111,7 @@ main nav {
 .social-buttons img {
   height: 17px;
   margin: 2px;
+  filter: invert(1);
 }
 
 #tour-dates {
