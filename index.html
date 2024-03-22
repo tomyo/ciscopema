@@ -1,86 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+  <title>Cisco Pema</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Cisco Pema</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Cisco Pema, bassist, singer and producer from Buenos Aires/Berlin"
+    lang="en"
+  />
+  <meta
+    name="description"
+    content="Cisco Pema, Bassist, Sänger und Produzent aus Buenos Aires/Berlin"
+    lang="de"
+  />
+  <meta
+    name="description"
+    content="Cisco Pema, bajista, cantante y productor de Buenos Aires/Berlín"
+    lang="es"
+  />
 
-<meta name="description" content="Cisco Pema, bassist, singer and producer from Buenos Aires/Berlin" lang="en">
-<meta name="description" content="Cisco Pema, Bassist, Sänger und Produzent aus Buenos Aires/Berlin" lang="de">
-<meta name="description" content="Cisco Pema, bajista, cantante y productor de Buenos Aires/Berlín" lang="es">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+  <link
+    rel="preload"
+    href="/assets/fonts/LucidaGrande.subset.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="/assets/fonts/Aquatico-Regular.subset.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link rel="stylesheet" type="text/css" href="index.css" />
 
-<link rel="shortcut icon" type="image/png" href="/favicon.png">
-<link rel="preload" href="/assets/fonts/LucidaGrande.subset.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/Aquatico-Regular.subset.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" type="text/css" href="index.css" />
+  <script src="index.js" type="module" defer></script>
 
-<script src="index.js" type="module" defer></script>
-<script src="components/tour-dates.js" type="module" defer></script>
+  <header>
+    <select id="lang-switcher" class="button">
+      <option value="en" lang="en" default>EN</option>
+      <option value="de" lang="de">DE</option>
+      <option value="es" lang="es">ES</option>
+    </select>
+  </header>
 
-<header>
-  <select id="lang-switcher" class="button">
-    <option value="en" lang="en" default>EN</option>
-    <option value="de" lang="de">DE</option>
-    <option value="es" lang="es">ES</option>
-  </select>
-</header>
+  <main>
+    <h1 class="item">Cisco Pema</h1>
+    <nav>
+      <button id="press-info">+ Info</button>
 
-<main>
-  <h1 class="item">Cisco Pema</h1>
-  <nav>
-    <button id="press-info">+ Info</button>
+      <div class="social-buttons">
+        <a
+          class="button"
+          href="http://facebook.com/ciscopemamusic"
+          title="@ciscopemamusic on Facebook"
+        >
+          <img alt="Link to Facebook" src="/assets/images/facebook.svg" />
+        </a>
+        <a
+          class="button"
+          href="http://instagram.com/ciscopema"
+          title="@ciscopema on Instagram"
+        >
+          <img alt="Link to Instagram" src="/assets/images/instagram.svg" />
+        </a>
+        <a
+          class="button"
+          href="mailto:hola@ciscopema.com"
+          title="Email hola@ciscopema.com"
+        >
+          <img alt="Send email" src="/assets/images/envelope.svg" />
+        </a>
+        <br />
+        <a
+          class="button"
+          href="https://www.youtube.com/channel/UC3K26naF-NtGUZzu-Mrb2Sw"
+          title="@ciscopema Youtube channel"
+        >
+          <img alt="Link to YouTube" src="/assets/images/youtube.svg" />
+        </a>
+        <a
+          class="button"
+          href="https://open.spotify.com/artist/6eIRNPQkGR88apwP28kM7j"
+          title="@ciscopema on Spotify"
+        >
+          <img alt="Link to Spotify" src="/assets/images/spotify.svg" />
+        </a>
+        <a
+          class="button"
+          href="https://itunes.apple.com/de/artist/cisco-pema/1156430283"
+          title="@ciscopema on iTunes"
+        >
+          <img alt="Link to itunes" src="/assets/images/itunes.svg" />
+        </a>
+      </div>
+    </nav>
+    <section id="tour-dates">
+      <details>
+        <summary class="button" data-l10n-key="tour-dates">Tour Dates</summary>
+        <script
+          charset="utf-8"
+          src="https://widgetv3.bandsintown.com/main.min.js"
+        ></script>
+        <a
+          class="bit-widget-initializer"
+          data-artist-name="id_13091354"
+          data-background-color="transparent"
+          data-separator-color="#DDDDDD"
+          data-text-color="#c8c8c8"
+          data-font="Lucida Grande, system-ui"
+          data-auto-style="true"
+          data-button-label-capitalization="capitalize"
+          data-header-capitalization="undefined"
+          data-location-capitalization="capitalize"
+          data-venue-capitalization="capitalize"
+          data-display-local-dates="true"
+          data-local-dates-position=""
+          data-display-past-dates="true"
+          data-display-details=""
+          data-display-lineup=""
+          data-display-start-time=""
+          data-social-share-icon="true"
+          data-display-limit="all"
+          data-date-format="MMM. D, YYYY"
+          data-date-orientation="horizontal"
+          data-date-border-color="#4A4A4A"
+          data-date-border-width="1px"
+          data-date-capitalization="undefined"
+          data-date-border-radius="10px"
+          data-event-ticket-cta-size="medium"
+          data-event-custom-ticket-text="undefined"
+          data-event-ticket-text="TICKETS"
+          data-event-ticket-icon=""
+          data-event-ticket-cta-text-color="#FFFFFF"
+          data-event-ticket-cta-bg-color="#4A4A4A"
+          data-event-ticket-cta-border-color="#4A4A4A"
+          data-event-ticket-cta-border-width="0px"
+          data-event-ticket-cta-border-radius="4px"
+          data-sold-out-button-text-color="#FFFFFF"
+          data-sold-out-button-background-color="#4A4A4A"
+          data-sold-out-button-border-color="#4A4A4A"
+          data-sold-out-button-clickable="true"
+          data-event-rsvp-position="left"
+          data-event-rsvp-cta-size="small"
+          data-event-rsvp-only-show-icon="false"
+          data-event-rsvp-text="REMIND ME"
+          data-event-rsvp-icon=""
+          data-event-rsvp-cta-text-color="#4A4A4A"
+          data-event-rsvp-cta-bg-color="#FFFFFF"
+          data-event-rsvp-cta-border-color="#4A4A4A"
+          data-event-rsvp-cta-border-width="1px"
+          data-event-rsvp-cta-border-radius="4px"
+          data-follow-section-position="top"
+          data-follow-section-alignment="center"
+          data-follow-section-header-text="Get updates on new shows, new music, and more."
+          data-follow-section-cta-size="medium"
+          data-follow-section-cta-text="FOLLOW"
+          data-follow-section-cta-icon="true"
+          data-follow-section-cta-text-color="#FFFFFF"
+          data-follow-section-cta-bg-color="#4A4A4A"
+          data-follow-section-cta-border-color="#4A4A4A"
+          data-follow-section-cta-border-width="0px"
+          data-follow-section-cta-border-radius="4px"
+          data-play-my-city-position="bottom"
+          data-play-my-city-alignment="Center"
+          data-play-my-city-header-text="Don’t see a show near you?"
+          data-play-my-city-cta-size="medium"
+          data-play-my-city-cta-text="REQUEST A SHOW"
+          data-play-my-city-cta-icon="true"
+          data-play-my-city-cta-text-color="#FFFFFF"
+          data-play-my-city-cta-bg-color="#4A4A4A"
+          data-play-my-city-cta-border-color="#4A4A4A"
+          data-play-my-city-cta-border-width="0px"
+          data-play-my-city-cta-border-radius="4px"
+          data-optin-font=""
+          data-optin-text-color=""
+          data-optin-bg-color=""
+          data-optin-cta-text-color=""
+          data-optin-cta-bg-color=""
+          data-optin-cta-border-width=""
+          data-optin-cta-border-radius=""
+          data-optin-cta-border-color=""
+          data-language="en"
+          data-layout-breakpoint="900"
+          data-app-id=""
+          data-affil-code=""
+          data-bit-logo-position="bottomRight"
+          data-bit-logo-color="transparent"
+        ></a>
+      </details>
+    </section>
+  </main>
 
-    <div class="social-buttons">
-      <a class="button" href="http://facebook.com/ciscopemamusic" title="@ciscopemamusic on Facebook">
-        <img alt="Link to Facebook" src="/assets/images/facebook.svg">
-      </a>
-      <a class="button" href="http://instagram.com/ciscopema" title="@ciscopema on Instagram">
-        <img alt="Link to Instagram" src="/assets/images/instagram.svg">
-      </a>
-      <a class="button" href="mailto:hola@ciscopema.com" title="Email hola@ciscopema.com">
-        <img alt="Send email" src="/assets/images/envelope.svg">
-      </a>
-      <br />
-      <a class="button" href="https://www.youtube.com/channel/UC3K26naF-NtGUZzu-Mrb2Sw"
-        title="@ciscopema Youtube channel">
-        <img alt="Link to YouTube" src="/assets/images/youtube.svg">
-      </a>
-      <a class="button" href="https://open.spotify.com/artist/6eIRNPQkGR88apwP28kM7j" title="@ciscopema on Spotify">
-        <img alt="Link to Spotify" src="/assets/images/spotify.svg">
-      </a>
-      <a class="button" href="https://itunes.apple.com/de/artist/cisco-pema/1156430283" title="@ciscopema on iTunes">
-        <img alt="Link to itunes" src="/assets/images/itunes.svg">
-      </a>
-    </div>
-  </nav>
-  <section id="tour-dates">
-    <details>
-      <summary class="button" data-l10n-key="tour-dates">Tour Dates</summary>
-      <tour-dates loading="lazy">
-        <p data-l10n-key="fetching-tour-dates">... fetching tour dates</p>
-      </tour-dates>
-    </details>
-  </section>
-</main>
+  <dialog>
+    <h2 data-l10n-key="press-info-title">Press Information</h2>
+    <p data-l10n-key="press-info-text">
+      A charming blend of South American songwriting with jazz elements is the
+      center of Cisco Pema's music. Modern harmonic structures together with a
+      mix of traditional and contemporary rhythms make his music stand out from
+      the rest.<br />
+      Born in Buenos Aires, and up on the stage since early childhood, Cisco
+      Pema moved to Austria to achieve the Jazz and Improvisation Music diploma
+      in the Bruckner University. Always working as a bass sideman, composer and
+      producer, he finally settles in Berlin where he launched his solo career
+      presenting his debut album in 2016.<br />
+      Today after four studio albums and over hundred shows in Europe and South
+      America, Cisco Pema delivers a charismatic and fresh performance no one
+      should miss.
+    </p>
+    <form method="dialog">
+      <button value="close" data-l10n-key="close">Close</button>
+    </form>
+  </dialog>
 
-<dialog>
-  <h2 data-l10n-key="press-info-title">Press Information</h2>
-  <p data-l10n-key="press-info-text">
-    A charming blend of South American songwriting with jazz elements is the center of Cisco Pema's music.
-    Modern harmonic structures together with a mix of traditional and contemporary rhythms make his music stand out
-    from the rest.<br>
-    Born in Buenos Aires, and up on the stage since early childhood, Cisco Pema moved to Austria to
-    achieve the Jazz and Improvisation Music diploma in the Bruckner University.
-    Always working as a bass sideman, composer and producer, he finally settles in Berlin where he launched his solo
-    career presenting his debut album in 2016.<br>
-    Today after four studio albums and over hundred shows in Europe and South America, Cisco Pema delivers a
-    charismatic and fresh performance no one should miss.
-  </p>
-  <form method="dialog">
-    <button value="close" data-l10n-key="close">Close</button>
-  </form>
-</dialog>
-
-<picture>
-  <img class="background-image" src="/assets/images/cover-original.jpg" alt="Background photo" />
-</picture>
+  <picture>
+    <img
+      class="background-image"
+      src="/assets/images/cover-original.jpg"
+      alt="Background photo"
+    />
+  </picture>
+</html>
