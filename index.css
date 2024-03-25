@@ -112,6 +112,15 @@ main nav {
   filter: invert(1);
 }
 
+.info-donate {
+  display: flex;
+  gap: 0.5em;
+}
+
+#donate-button {
+  animation: glow 1s infinite alternate;
+}
+
 #tour-dates {
   min-width: max-content;
   filter: drop-shadow(0px 0px 1em var(--background-color));
@@ -188,4 +197,13 @@ tour-dates {
 
 tour-dates::part(button) {
   font-family: var(--font-family-primary);
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 3px -3px #fefc9d;
+  }
+  to {
+    box-shadow: 0 0 3px 3px #fefc9d;
+  }
 }
