@@ -81,8 +81,8 @@ main > * {
 main nav {
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 1em;
-  margin-block-start: auto;
 }
 
 #lang-switcher {
@@ -127,7 +127,7 @@ main nav {
 .button,
 button,
 *::part(button) {
-  padding: 0.6em 0.6em;
+  padding: 6px 12px;
   border: 1px solid var(--main-color);
   border-radius: 1em;
   font-weight: bold;
