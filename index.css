@@ -33,6 +33,7 @@
   --font-family-primary: "Lucida Grande", system-ui;
   --font-family-secondary: "Aquatico", system-ui;
   --font-family-fallback: system-ui, sans-serif;
+  color-scheme: dark;
 
   height: 100%;
 }
@@ -140,6 +141,7 @@ button,
   border: 1px solid var(--main-color);
   border-radius: 1em;
   font-weight: bold;
+  font-size: 1rem;
   letter-spacing: 1px;
   text-shadow: none;
   text-decoration: none;
@@ -147,6 +149,7 @@ button,
   opacity: 0.8;
   color: inherit;
   background-color: inherit;
+  cursor: pointer;
 }
 
 .button:hover,

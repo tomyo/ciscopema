@@ -37,7 +37,6 @@
   />
   <link rel="stylesheet" type="text/css" href="index.css" />
 
-  <script src="index.js" type="module" defer></script>
   <script src="/components/bands-in-town.js" type="module" defer></script>
 
   <header>
@@ -98,7 +97,7 @@
     </div>
     <nav>
       <div class="info-donate">
-        <a href="#" class="button" id="press-info">+ Info</a>
+        <button onclick="pressInfo.showModal()">+ Info</button>
         <a
           class="button"
           id="donate-button"
@@ -217,7 +216,7 @@
     </nav>
   </main>
 
-  <dialog>
+  <dialog id="pressInfo">
     <h2 data-l10n-key="press-info-title">Press Information</h2>
     <p data-l10n-key="press-info-text">
       A charming blend of South American songwriting with jazz elements is the
@@ -237,4 +236,26 @@
       <button value="close" data-l10n-key="close">Close</button>
     </form>
   </dialog>
+
+  <script type="module">
+    async function localize() {
+      const { useL10n } = await import("./lib/i18n/use-l10n.js");
+      const [getUILanguage, getPreferredLanguage, translateInto] = useL10n({
+        filesPath: "./l10n/",
+      });
+      const langSwitcher = document.querySelector("#lang-switcher");
+
+      langSwitcher.addEventListener("change", (e) =>
+        translateInto(e.target.value)
+      );
+
+      if (getUILanguage() !== getPreferredLanguage()) {
+        await translateInto(getPreferredLanguage());
+      }
+
+      langSwitcher.value = getUILanguage();
+    }
+
+    localize();
+  </script>
 </html>
