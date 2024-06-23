@@ -17,7 +17,7 @@ customElements.define(
     connectedCallback() {
       this.innerHTML = /*html*/ `
         <form style="display: grid; gap: 1rem">
-          <h3 data-l10n-key="subscribe-to-newsletter">Subscribe to Newsletter</h3>
+          <h3>Subscribe to Newsletter</h3>
           <input name="email" type="email" placeholder="Email" required />
           <input name="name" type="text" placeholder="Name (Optional)" />
           <button type="submit">${this.submitButtonTexts["default"]}</button>
