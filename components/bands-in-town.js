@@ -5,7 +5,6 @@ customElements.define(
       super();
       this.attachShadow({ mode: "open" });
       this.shadowRoot.innerHTML = `
-        
         <slot></slot>
       `;
     }

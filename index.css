@@ -137,6 +137,7 @@ main nav {
 .button,
 button,
 *::part(button) {
+  display: block;
   padding: 6px 12px;
   border: 1px solid var(--main-color);
   border-radius: 1em;
@@ -150,6 +151,11 @@ button,
   color: inherit;
   background-color: inherit;
   cursor: pointer;
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: default;
+  }
 }
 
 .button:hover,
@@ -166,6 +172,7 @@ dialog {
   font-family: system-ui;
   letter-spacing: 0.1px;
   max-width: 60ch;
+  padding: 2rem;
 }
 
 dialog::backdrop {
@@ -174,7 +181,8 @@ dialog::backdrop {
   -webkit-backdrop-filter: blur(1rem);
 }
 
-dialog form {
+dialog form[method="dialog"] {
+  margin-top: 2rem;
   text-align: end;
 }
 

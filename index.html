@@ -37,7 +37,8 @@
   />
   <link rel="stylesheet" type="text/css" href="index.css" />
 
-  <script src="/components/bands-in-town.js" type="module" defer></script>
+  <script src="/components/bands-in-town.js" type="module"></script>
+  <script src="/components/newsletter-signup.js" type="module"></script>
 
   <header>
     <select id="lang-switcher" class="button">
@@ -97,7 +98,7 @@
     </div>
     <nav>
       <div class="info-donate">
-        <button onclick="pressInfo.showModal()">+ Info</button>
+        <button onclick="pressInfoDialog.showModal()">+ Info</button>
         <a
           class="button"
           id="donate-button"
@@ -107,12 +108,12 @@
         >
       </div>
 
-      <a
-        class="button"
-        target="_blank"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSeu9B_4PI27c9EMMMHm9gw4C9c1D1cSNELvUPCf00uL8IGjOQ/viewform?usp=sf_link"
-        >Subscribe to Newsletter</a
+      <button
+        onclick="newsletterDialog.showModal()"
+        data-l10n-key="subscribe-to-newsletter"
       >
+        Subscribe to Newsletter
+      </button>
 
       <section id="tour-dates">
         <details>
@@ -216,7 +217,7 @@
     </nav>
   </main>
 
-  <dialog id="pressInfo">
+  <dialog id="pressInfoDialog">
     <h2 data-l10n-key="press-info-title">Press Information</h2>
     <p data-l10n-key="press-info-text">
       A charming blend of South American songwriting with jazz elements is the
@@ -232,6 +233,13 @@
       America, Cisco Pema delivers a charismatic and fresh performance no one
       should miss.
     </p>
+    <form method="dialog">
+      <button value="close" data-l10n-key="close">Close</button>
+    </form>
+  </dialog>
+
+  <dialog id="newsletterDialog">
+    <newsletter-signup></newsletter-signup>
     <form method="dialog">
       <button value="close" data-l10n-key="close">Close</button>
     </form>
